@@ -1,0 +1,12 @@
+PROGRAM PrintHello(INPUT, OUTPUT);
+USES Dos;
+BEGIN{PrintHello}
+  WRITELN('Content-Type: text/plain');
+  WRITELN;
+  WRITELN('REQUEST_METHOD');
+  WRITELN(GetEnv('QUERY_STRING'));
+  WRITELN('CONTNT_LENGTH');
+  WRITELN('HTTP_USER_AGENT');
+  WRITELN('HTTP_HOST');
+  WRITELN('Hello world!');
+END.
