@@ -1,0 +1,192 @@
+*
+{
+  padding: 0;
+  margin: 0;
+}
+
+.link-style-disabled
+{
+  text-decoration: none;
+}
+
+.list-dot-disabled
+{
+  list-style-type: none;
+}
+
+.menu
+{
+  max-width: 1680px;
+  height: 55px;
+ /* margin: 30px 120px 43px 120px;*/
+}
+
+.menu__button
+{
+  width: 247px;
+}
+
+.menu__logo
+{
+width: 203px;
+height: 37.69px;
+}
+
+.menu__item
+{
+  font: 500 16px/1 'Montserrat';
+  color: #000;
+}
+
+.button
+{
+  height: 55px;
+  background-color: #05090C;
+  border-radius: 4.59px;
+  text-align: center;
+}
+
+.menu__button
+{
+  width: 247px;
+  height: 55px;
+}
+
+.button__text
+{
+  text-decoration: none;
+  font: 600 16px/0.84 'Montserrat';
+  color: #fff;
+}
+
+.main-block__heading
+{
+  font: 600 100px/1.22 'Montserrat';
+  color: #000;
+  padding-top: 180px;
+}
+
+.block__heading-color
+{
+  color: #EE58B6;
+}
+
+.main-block__text
+{
+  font: 400 26px/1.2 'Roboto Condensed';
+  color: #4D4D4D;
+  width: 545px;
+  height: 62px;
+  padding-top: 4.69px;
+}
+
+.main-block__button
+{
+  margin-top: 46px;
+  width: 332px;
+}
+
+.main-picture
+{
+  width: 762px;
+  height: 637.87px;
+}
+
+.wrapper
+{
+  max-width: 1135px;
+}
+
+.intro
+{
+  background-color: #000;
+  height: 398px;
+}
+
+.intro__text
+{
+  font: 400 22px/1.2 'Roboto Condensed';
+  color: #FFF;
+}
+
+.intro__part
+{
+  text-align: center;
+}
+
+.intro__parts
+{
+  padding-bottom: 155px;
+}
+
+.first-section
+{
+  margin-top: 72px;
+}
+
+.section__heading
+{
+  font: 500 48px/1.26 'Montserrat';
+  color: #000;
+}
+
+.section__text
+{
+  font: 400 18px/1.35 'Roboto Condensed';
+  color:#4D4D4D;
+  margin-top: 26px;
+}
+
+.section__picture
+{
+  width: 510px;
+  height: 476px;
+}
+
+.blocks
+{
+  margin-top: 60.23px;
+  margin-bottom: 288.77px;
+}
+
+.block
+{
+  width: 358px;
+  height: 190px;
+  background-color: #000;
+  border-radius: 7.35723px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.block__heading
+{
+  font: 500 48px/1 'Montserrat';
+  color: #000;
+  margin-top: 98px;
+}
+
+.block__text
+{
+  font: 400 18px/1 'Roboto Condensed';
+  text-align: left;
+  color: #FFF;
+  text-align: left;
+}
+
+.block__icon
+{
+  text-align: left;
+}
+
+.footer
+{
+  background-color: #000;
+  height: 108px;
+  text-align: center;
+}
+
+.footer__logo
+{
+  padding-top: 30px;
+}
