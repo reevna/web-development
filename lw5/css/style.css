@@ -12,29 +12,44 @@
 .list-dot-disabled
 {
   list-style-type: none;
+  display: inline-block;
+  padding-right: 87px;
 }
 
 .menu
 {
-  max-width: 1680px;
+  max-width: 1780px;
   height: 55px;
- /* margin: 30px 120px 43px 120px;*/
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  padding-top: 30px;
+}
+
+.menu_wrapper
+{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 18px;
 }
 
 .menu__button
 {
   width: 247px;
+  height: 38px;
 }
 
 .menu__logo
 {
-width: 203px;
-height: 37.69px;
+  width: 203px;
+  top: 38px;
+  padding-right: 662px;
 }
 
 .menu__item
 {
-  font: 500 16px/1 'Montserrat';
+  font: 500 16px/1 'Montserrat', sans-serif;
   color: #000;
 }
 
@@ -55,29 +70,39 @@ height: 37.69px;
 .button__text
 {
   text-decoration: none;
-  font: 600 16px/0.84 'Montserrat';
+  font: 600 16px/0.84 'Montserrat', sans-serif;
   color: #fff;
+  padding: 19px;
+}
+
+.main-block
+{
+  max-width: 1580px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding-top: 43px;
 }
 
 .main-block__heading
 {
-  font: 600 100px/1.22 'Montserrat';
+  font: 600 100px/1.22 'Montserrat', sans-serif;
   color: #000;
   padding-top: 180px;
 }
 
-.block__heading-color
+.block__heading_color
 {
   color: #EE58B6;
 }
 
 .main-block__text
 {
-  font: 400 26px/1.2 'Roboto Condensed';
+  font: 400 26px/1.2 'Roboto Condensed', sans-serif;
   color: #4D4D4D;
   width: 545px;
   height: 62px;
-  padding-top: 4.69px;
+  padding-top: 4.7px;
 }
 
 .main-block__button
@@ -89,52 +114,100 @@ height: 37.69px;
 .main-picture
 {
   width: 762px;
-  height: 637.87px;
+  height: 638px;
+  padding: 30px 0 65px 0;
 }
 
-.wrapper
+.middle-wrapper
 {
-  max-width: 1135px;
+  max-width: 1136px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .intro
 {
   background-color: #000;
   height: 398px;
+  display: flex;
+  justify-content: center;
 }
 
 .intro__text
 {
-  font: 400 22px/1.2 'Roboto Condensed';
+  font: 400 22px/1.2 'Roboto Condensed', sans-serif;
   color: #FFF;
+}
+
+.black-background__text_left
+{
+  max-width: 286px;
+}
+
+.black-background__text_center
+{
+  max-width: 337px;
+}
+
+.black-background__text_right
+{
+  max-width: 293px;
 }
 
 .intro__part
 {
   text-align: center;
-}
+  }
 
 .intro__parts
 {
-  padding-bottom: 155px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1136px;
+  margin: auto 0 155px 0;
+  text-align: center;
 }
 
-.first-section
+.notime-section__notime-text
+{
+  margin-top: 225px;
+}
+
+.deadline-section__deadline-text
+{
+  margin-top: 283px;
+}
+
+.notime-section
 {
   margin-top: 72px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.deadline-section
+{
+  display: flex;
+  justify-content: space-between;
 }
 
 .section__heading
 {
-  font: 500 48px/1.26 'Montserrat';
+  font: 500 48px/1.26 'Montserrat', sans-serif;
   color: #000;
 }
 
 .section__text
 {
-  font: 400 18px/1.35 'Roboto Condensed';
+  font: 400 18px/1.35 'Roboto Condensed', sans-serif;
   color:#4D4D4D;
   margin-top: 26px;
+}
+
+.section__all-texts
+{
+  text-align: left;
+  max-width: 574px;
 }
 
 .section__picture
@@ -145,8 +218,11 @@ height: 37.69px;
 
 .blocks
 {
-  margin-top: 60.23px;
-  margin-bottom: 288.77px;
+  margin-top: 60px;
+  margin-bottom: 289px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .block
@@ -154,39 +230,75 @@ height: 37.69px;
   width: 358px;
   height: 190px;
   background-color: #000;
-  border-radius: 7.35723px;
+  border-radius: 7px;
   margin-bottom: 30px;
   text-align: center;
 }
 
-.block__heading
-{
-  font: 500 48px/1 'Montserrat';
-  color: #000;
-  margin-top: 98px;
-}
-
 .block__text
 {
-  font: 400 18px/1 'Roboto Condensed';
+  font: 400 18px/1 'Roboto Condensed', sans-serif;
   text-align: left;
   color: #FFF;
-  text-align: left;
+  position: relative;
+  left: 40px;
+  max-width: 270px;
+  margin-top: 20px;
 }
 
 .block__icon
 {
   text-align: left;
+  display: block;
+  margin-top: 32px;
+  margin-left: 40px;
+  margin-top: 32px;
 }
 
 .footer
 {
   background-color: #000;
-  height: 108px;
   text-align: center;
 }
 
 .footer__logo
 {
-  padding-top: 30px;
+  padding: 35px 0;
+}
+
+.black-background__icon
+{
+  padding-top: 116px;
+}
+
+.black-background
+{
+  background-color: #000;
+  height: 398px;
+}
+
+.black-background__text
+{
+  font: 400 22px/1.2 'Roboto Condensed', sans-serif;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 24px;
+}
+
+.wrapper_middle
+{
+  max-width: 1136px;
+  display: flex;
+  margin: auto auto 155px auto;
+  justify-content: space-between;
+}
+
+.three-points
+{
+  text-align: center;
+}
+
+.section__heading_youcan
+{
+  padding-top: 98px;
 }

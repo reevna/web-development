@@ -8,90 +8,93 @@
   </head>
   <body>
     <header>
-      <nav class="menu">
-        <ul>
-          <li class="list-dot-disabled"><img class="menu__logo" src="img/Frame84.svg" alt="логотип Don't do it" /></li>
-          <li class="list-dot-disabled"><a class="link-style-disabled menu__item" href="ссылка" title = "Что будет на курсе?">Что будет на курсе?</a></li>
-          <li class="list-dot-disabled"><a class="link-style-disabled menu__item" href="ссылка">Вопросы</a></li>
-          <li class="list-dot-disabled"><a class="link-style-disabled menu__item" href="ссылка">Автор</a></li>
-          <div class="button menu__button"><a class="button__text list-dot-disabled" href="ссылка">Записаться на курс</a></div>
-        </ul>
-      </nav>
+      <div class="menu">
+        <img class="menu__logo" src="img/logo.svg" alt="логотип Don't do it" />
+        <nav >
+          <ul class="menu_wrapper">
+            <li class="list-dot-disabled"><a class="link-style-disabled menu__item" href="ссылка" title = "Что будет на курсе?">Что будет на курсе?</a></li>
+            <li class="list-dot-disabled"><a class="link-style-disabled menu__item" href="ссылка">Вопросы</a></li>
+            <li class="list-dot-disabled"><a class="link-style-disabled menu__item" href="ссылка">Автор</a></li>
+           </ul>
+        </nav>
+        <div class="button menu__button"><a class="button__text list-dot-disabled" href="ссылка">Записаться на курс</a></div>
+      </div>
     </header>
 
-    <section>
+    <div class="main-block">
       <div class="main-block__texts">
-        <h1 class="main-block__heading">Не <span class="block__heading-color">делай</span> это</h1>
+        <h1 class="main-block__heading">Не <span class="block__heading_color">делай</span> это</h1>
         <p class="main-block__text">Онлайн-курс для творческих людей, о том, как управлять своим временем</p>
         <div class="button main-block__button"><a class="button__text list-dot-disabled" href="ссылка">Записаться на курс</a></div>
       </div>
       <img class="main-picture" src="img/Done.png" alt="Иллюстрация" />
-    </section>
+    </div>
 
-    <div class="wrapper">
-      <section>
-        <div class="intro">
-          <div class="intro__parts">
-            <div class="intro__part">
-              <img src="img/time.svg" alt="Иконка1" />
-              <p class="intro__text">Для тех, у кого слишком много идей и слишком мало времени</p>
-            </div>
-            <div class="intro__part">
-              <img src="img/Vector.svg" alt="Иконка2" />
-              <p class="intro__text">Метод «списка не дел», который позволит успевать и реализовывать</p>
-            </div>
-            <div class="intro__part">
-              <img src="img/Vector (1).svg" alt="Иконка3" />
-              <p class="intro__text">Курс научит творческих людей сосредоточиваться</p>
-            </div>
-          </div>
+    <div class="black-background">
+      <div class="wrapper_middle">
+         <div class="three-points">
+           <img class="black-background__icon" src="img/time.svg" alt="Время" />
+           <p class="black-background__text black-background__text_left">Для тех, у кого слишком много идей и слишком мало времени</p>
+         </div>
+         <div class="three-points">
+           <img class="black-background__icon" src="img/note.svg" alt="Блокнот" />
+           <p class="black-background__text black-background__text_center">Метод «списка не дел», который позволит успевать и реализовывать</p>
+         </div>
+         <div class="three-points">
+           <img class="black-background__icon" src="img/aim.svg" alt="Цель" />
+           <p class="black-background__text black-background__text_right">Курс научит творческих людей сосредоточиваться</p>
+         </div>
+      </div>
+    </div>
+
+    <div class="middle-wrapper">
+      <div class="notime-section">
+        <img class="section__picture" src="img/Finances.png" alt="Хочу всё успеть" />
+        <div class="notime-section__notime-text">
+          <h2 class="section__heading section__all-texts">Ты не успеешь</h2>
+          <p class="section__all-texts section__text">Всех творческих людей объединяет одна проблема - отсутствие времени на реализацию идей.
+             Как прибавить суткам часы, рассмотрим в нашем курсе.</p>
         </div>
-      </section>
+      </div>
 
-      <section class="first-section">
-        <h2 class="section__heading">Ты не успеешь</h2>
-        <p class="section__text">Всех творческих людей объединяет одна проблема - отсутствие времени на реализацию идей.
-           Как прибавить суткам часы, рассмотрим в нашем курсе.</p>
-         <img class="section__picture" src="img/Finances.png" alt="Иллюстрация2" />
-      </section>
+      <div class="deadline-section">
+        <div class="deadline-section__deadline-text">
+        <h2 class="section__heading section__all-texts">Опять дедлайн</h2>
+        <p class="section__all-texts section__text">В мире, где столько всего интересного, когда же успевать жить?</p>
+        </div>
+         <img src="img/Mind_Blowing.png" alt="Взрыв мозга" />
+      </div>
 
-      <section>
-        <h2 class="section__heading">Опять дедлайн</h2>
-        <p class="section__text">В мире, где столько всего интересного, когда же успевать жить?</p>
-         <img src="img/Mind Blowing.png" alt="Иллюстрация3" />
-      </section>
-
-      <section>
-        <h2 class="block__heading">На курсе ты <span class="block__heading-color">сможешь</span></h2>
+      <div>
+        <h2 class="section__heading section__heading_youcan">На курсе ты <span class="block__heading_color">сможешь</span></h2>
         <div class="blocks">
           <div class="block">
-            <img class="block__icon" src="img/Vector (2).svg" alt="Один_палец" />
+            <img class="block__icon" src="img/1finger.svg" alt="Один палец" />
             <p class="block__text">Понять, что нужно делать, а что делать не стоит.</p>
           </div>
           <div class="block">
-            <img class="block__icon" src="img/Vector (3).svg" alt="Два_пальца" />
+            <img class="block__icon" src="img/2fingers.svg" alt="Два пальца" />
             <p class="block__text">Перестать себя искусственно ограничивать.</p>
           </div>
           <div class="block">
-            <img class="block__icon" src="img/Vector (4).svg" alt="Три_пальца" />
+            <img class="block__icon" src="img/3fingers.svg" alt="Три пальца" />
             <p class="block__text">Определить сильные стороны и начать использовать слабые.</p>
           </div>
           <div class="block">
-            <img class="block__icon" src="img/Vector (5).svg" alt="Четыре_пальца" />
+            <img class="block__icon" src="img/4fingers.svg" alt="Четыре пальца" />
             <p class="block__text">Научиться достигать любой цели в 3 понятных шага.</p>
           </div>
           <div class="block">
-            <img class="block__icon" src="img/Vector (6).svg" alt="Пять_пальцев" />
+            <img class="block__icon" src="img/5fingers.svg" alt="Пять пальцев" />
             <p class="block__text">Сотрудничать эффективно и с правильными людьми.</p>
           </div>
           <div class="block">
-            <img class="block__icon" src="img/Vector (7).svg" alt="Шесть_пальцев" />
+            <img class="block__icon" src="img/6fingers.svg" alt="Шесть пальцев" />
             <p class="block__text">Оптимизировать общение с клиентами и проведение совещаний.</p>
           </div>
         </div>
-      </section>
+      </div>
     </div>
-
 
     <footer class="footer">
       <img class="footer__logo" src="img/logo_white.svg" alt="логотип Don't do it" />
