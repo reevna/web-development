@@ -1,0 +1,64 @@
+*
+{
+  padding: 0;
+  margin: 0;
+}
+
+.block
+{
+  margin: 26px 111px;
+}
+
+.button-form
+{
+  box-sizing: border-box;
+  max-width: 372px;
+  display: flex;
+  position: relative;
+  font: 500 18px/0.84 'Montserrat', sans-serif;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+
+.button
+{
+  background-color: #05090C;
+  border-radius: 4.59px;
+  border: 1px solid;
+  text-align: center;
+}
+
+
+.registration-button
+{
+  width: 100%;
+  max-width: 480px;
+}
+
+
+.button__text
+{
+  text-decoration: none;
+  font: 500 18px/1.2 'Montserrat', sans-serif;
+  color: #fff;
+  padding: 20px;
+  padding-left: 16px;
+}
+
+.card
+{
+  max-width: 372px;
+  max-height: 288px;
+  margin: 29px 74px 69px 0;
+  background-color: #05090C;
+  border-radius: 12px;
+}
+
+.card_data
+{
+padding: 47px 31px ;
+font: 500 18px/1.6 'Montserrat', sans-serif;
+color: #fff;
+
+}
