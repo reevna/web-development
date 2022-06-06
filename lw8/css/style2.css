@@ -1,0 +1,66 @@
+*
+{
+  padding: 0;
+  margin: 0;
+}
+
+
+.wrapper
+{
+margin-top: 52px;
+margin-left: 59px;
+display: block;
+}
+
+
+.registration-box
+{
+  display: block;
+  max-width: 480px;
+  height: 64px;
+  border: 1px solid #C0C0C0;
+  border-radius: 4px;
+  padding-left: 22px;
+
+}
+
+.registration-text
+{
+  font: 500 18px/22px 'Montserrat', sans-serif;
+  color:  #999999;
+}
+
+.button-form
+{
+  box-sizing: border-box;
+  font: 500 18px/0.84 'Montserrat', sans-serif;
+  border-radius: 5px;
+   background-color: #05090C;
+  border-radius: 4.59px;
+  border: 1px solid;
+  text-align: center;
+  max-width: 480px;
+}
+
+
+.button
+{
+  background-color: #05090C;
+  border-radius: 4.59px;
+  border: 1px solid;
+  text-align: center;
+  max-width: 480px;
+}
+
+
+
+.button__text
+{
+  text-decoration: none;
+  font: 500 18px/1.2 'Montserrat', sans-serif;
+  color: #fff;
+  padding: 20px;
+  padding-left: 16px;
+  max-width: 480px;
+}
+
