@@ -1,63 +1,71 @@
-window.onload = main;
-function main(){
+const overlay = document.getElementById('overlay');
+const popupContainer = document.getElementById('popup__container');
+const popUp = document.getElementById('popup');
+const closePopup = document.getElementById('close_popup');
+const openPopupButtons = document.querySelectorAll('.open_popup');
 
-  const overlay = document.createElement('div');
 
-// Открыть оверлэй и попап по клику на любую из кнопок
+escClose();
+overlayOpen();
+ovarlayClose();
+PopupClose();
 
-  const openPopupButtons = document.querySelectorAll('.open_popup');
-  openPopupButtons.forEach(openPopupButton => {
-    openPopupButton.addEventListener('click', function(event){
-      event.preventDefault();
-      overlay.classList.add('overlay');
-      document.body.appendChild(overlay);
-      popUp.classList.add('open');
-  });
-
-//Закрыть оверлей при клике по нему
-
- function overlayClose()
- {
-    const overlay = document.getElementsByClassName('overlay');
-    document.querySelector('overlay').addEventListener('click', () => {
-    document.body.removeChild(overlay);
-   })
+  // Открыть оверлэй и попап по клику на любую из кнопок
+  function overlayOpen()
+  {
+    openPopupButtons.forEach(openPopupButton =>
+      {
+        openPopupButton.addEventListener('click', function(event)
+        {
+          event.preventDefault();
+          popUp.classList.add('open');
+          overlay.classList.add('overlay');
+          overlay.classList.add('open');
+        });
+      });
   }
+
 
 // Закрыть попап при клике на крестик
-
-  const closePopup = document.getElementById('close_popup');
-  const popUp = document.getElementById('popup');
-
-    closePopup.addEventListener('click', () => {
-      popUp.classList.remove('open');
-      document.body.removeChild(overlay);
-  })
-
-
-
-
-// Закрыть оверлей и попап при клике на кнопу отправки формы
-
-  function sendForm()
+function PopupClose()
+{
+  closePopup.addEventListener('click', (e)=>
   {
-    const sendForm = document.getElementById('send_form');
-    sendForm.addEventListener('click', () => {
-        popUp.classList.remove('open');
-        document.body.removeChild(overlay);
-    })
+    if (e.target == closePopup)
+    {
+      popUp.classList.remove('open');
+      overlay.classList.remove('overlay');
+    }
+  })
+}
 
-  }
+
+//  закрытие при клике по оверлею
+function ovarlayClose()
+{
+  popupContainer.addEventListener('click', (e)=>
+  {
+    if (e.target == popupContainer)
+    {
+      popUp.classList.remove('open');
+      overlay.classList.remove('overlay');
+    }
+  })
+}
+
 
 // Закрыть оверлей и попап при нажатии на Esc
-
-  window.addEventListener('keydown', function(e)
+  function escClose()
   {
-    if ((e.key === 'Escape'|| e.key === 'Esc')) {
-      popUp.classList.remove('open');
-      document.body.removeChild(overlay);
+    window.addEventListener('keydown', function(e)
+    {
+      if ((e.key === 'Escape'|| e.key === 'Esc'))
+      {
+        popUp.classList.remove('open');
+        overlay.classList.remove('open');
+        animateClose(500);
+      }
+    });
+  }
 
-    }
- });
 
-    })}
