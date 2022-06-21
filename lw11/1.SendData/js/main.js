@@ -188,6 +188,7 @@ regForm.onsubmit = async function()
     //e.preventDefault();
     let response = await fetch('form_handler.php',
     {
+
       method: 'post',
       body: JSON.stringify(
       {
@@ -196,6 +197,7 @@ regForm.onsubmit = async function()
       activity: data.activity.value,
       checkbox: data.checkbox.checked
       })
+
     })
 
     if(response.ok)
@@ -204,6 +206,7 @@ regForm.onsubmit = async function()
       popUp.classList.remove('open');
       overlay.classList.remove('open');
       regForm.reset();
+      console.log(json);
       console.log(response.status);
     }
     else
