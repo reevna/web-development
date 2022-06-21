@@ -127,48 +127,66 @@ function ovarlayClose()
   }
 
 
+  let el = document.getElementById('form');
+
+  let nameValue = el.name.value;
+  let emailValue = el.email.value;
+  let activityValue = el.activity.value;
+
+
 
 function checkAllFields()
 {
-
-}
-
-
-
-
-function checkForm(event)
-{
-  event.preventDefault();
-  let el = document.getElementById('form');
-
-  let name = el.name.value;
-  let email = el.email.value;
-  let activity = el.activity.value;
-
-  let fail = "";
-
-  if (name == "" && email == "" && activity == "")
+  if (nameValue == "" && emailValue == "" && activityValue == "")
   {
     fail = "Заполните все поля";
     inputName.classList.add('error');
     inputEmail.classList.add('error');
     inputActivity.classList.add('error')
   }
-  else if (!validateName(name))
+}
+
+
+
+function checkNameField()
+{
+if (!validateName(nameValue))
   {
     fail = "Введите корректное имя";
     inputName.classList.add('error');
   }
-  else if (!validateEmail(email))
+}
+
+
+function checkEmailField()
+{
+if (!validateEmail(emailValue))
   {
     fail = "Введите корректный email";
     inputEmail.classList.add('error');
   }
-  else if (!validateActivity(activity))
+}
+
+
+function checkActivityField()
+{
+if (!validateActivity(activityValue))
   {
     fail = "Выберите деятельность";
     inputActivity.classList.add('error');
   }
+}
+
+
+function checkForm(event)
+{
+  event.preventDefault();
+  let fail = "";
+  checkAllFields(form);
+  checkNameField(form);
+  checkEmailField(form);
+  checkActivityField(form);
+
   if (fail != "") {
     console.log(fail);
   }
@@ -181,6 +199,8 @@ function checkForm(event)
     regForm.onsubmit();
   }
 }
+
+
 
 
 regForm.onsubmit = async function()
