@@ -12,17 +12,6 @@ $activity = getPostParameter($source, 'activity');
 $agreement = getPostParameter($source, 'checkbox');
 
 
-// if ($agreement = true)
-// $agreement = 'yes';
-// else
-// $agreement = 'no';
-
-
-header('Access-Control-Allow-Origin: *');
-
-header('Access-Control-Allow-Methods: GET, POST');
-
-header("Access-Control-Allow-Headers: X-Requested-With");
 
 
 if (!empty($name) && !empty($email) && !empty($activity))
@@ -47,7 +36,7 @@ else
 {
   $array = [
     'status' => '500',
-    'message' => 'Ошибка.' . $name . ' ' . $email . ' ' . $activity,
+    'message' => 'Ошибка.',
   ];
   $json_str = json_encode($array);
   echo $json_str;
