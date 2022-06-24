@@ -1,29 +1,73 @@
-let input
-let result
 
-const first = ['']
+function calculatePolish(expression){
 
-for (let i = 0; i <= input.length; i++) {
-  if i.isInteger {
-    digits = i;
+ // задаем результат  = 0
+const stack = [];
+
+//устаавливаем разделитель по которому отеляем вх. значения:
+const arr = expression.split(' ');
+
+while (arr.length){
+  const el = arr.pop();
+  const numberedEl = Number(el);
+  if (!isNaN(numberedEl)) {
+    stack.push(numberedEl);
+    continue;
   }
-  if
-  numbers = true
-    for (let j = 2; j < i; j++) {
-        if (i % j == 0) {
-            isPrime = false
-            break
-        }
-    }
-    if (isPrime) {
-        console.log(i)
-    }
+
+ const firstNumber = stack.pop();
+ const secondNum  = stack.pop();
+
+ switch(el){
+  case '+':
+    stack.push(firstNumber + secondNum);
+    break;
+  case '-':
+    stack.push(firstNumber - secondNum);
+    break;
+  case '*':
+    stack.push(firstNumber * secondNum);
+    break;
+  case '/':
+    stack.push(firstNumber / secondNum);
+    break;
+ }
+}
+return stack[0];
 }
 
 
+console.log(calculatePolish('+ 3 4'));
+console.log(calculatePolish('*(− 5 6) 7'));
 
-// Получаем каждое слово из строки
-//input.split(" "); //["Hello", "Tproger"]
 
-// Устанавливаем ограничитель
-//"Hello Tproger".split(" ", 1); //["Hello"]
+
+// проверка на вхдящие символы
+// if (typeof termInReversePolish !== 'string') {
+//   throw new Error(
+//     `No valid parameter given. String expected but ${typeof termInReversePolish} found.`);
+// }
+
+// if (termInReversePolish.search(/[^\d,+*\/-]/g) != -1) {
+//     throw new Error(
+//       'Given parameter contains illegal characters. Valid characters are: + - * / , 0-9');
+// }
+
+// проверка на последовательность
+// проверка на корректность ввода: что есть пробелы
+
+
+
+
+
+
+// читаем инпут
+
+
+
+// в цикле
+// определем символ
+//  если это +-*/  запоминаем
+//  если это (  - запоминаем
+//  если это число
+//  читаем следующий символ
