@@ -1,37 +1,28 @@
 <?php
 
-$contents = '';
+//$contents = '';
+$userCards  = [];
 $files = scandir('registration/'); //присваиваем переменной массив с листингом директории
 foreach($files as $file) //проходим по массиву
 {
-  if(!is_dir('registration/' . $file)) //если это файл, а не папка
-  {
-    $contents = file_get_contents('registration/' . $file);
-    // echo $contents[0];
-    // echo $contents[1];
-    // echo $contents[2];
-    // echo '\n';
-    // $fileName = $contents[0];
+  if(is_file('registration/' . $file))
+   // continue; //если это файл, а не папка
+     {
+  $content = file_get_contents('registration/' . $file);
+  $field = explode(PHP_EOL, $content);
 
-    $field = explode(PHP_EOL, $contents);
-    $arr = array(
-      $name = $field[0],
-      $email = $field[1],
-      $activity = $field[2],
-      $agreement = $field[3],
-    );
-    $json_str = json_encode($arr, true);
-    echo json_encode($arr, JSON_UNESCAPED_UNICODE);
+  $userCard = [
+    'name' => $field[0],
+    'email' => $field[1],
+    'activity' => $field[2],
+    'agreement' => $field[3],
+  ];
 
 
-    // echo "Имя: $name" . "<br>";
-    // echo "Email: $email" . "<br>";
-    // echo "Профессия: $activity" . "<br>";
-    // echo "Согласие: $agreement" . "<br>";
 
-  }
+  $userCards[]  = $userCard;
+
 }
-
-
-
-
+}
+$responseBody = json_encode($userCards, true);
+echo $responseBody;
