@@ -3,47 +3,24 @@ button.onclick = main;
 
 
 
-async function getUserCards()
- {
-  //  return [
-  //  {
-  //    name: 'asdasd',
-  //    email: 'dfsd'
-  //  },
-  //  {
-  //    name: 'q1qqq',
-  //    email: '234234dfsd'
-  //  }
- //];
-   let response = await fetch('http://localhost:8080/getData.php',
-   {
-     headers : {
-       'Content-Type': 'application/json',
-       'Accept': 'application/json'
-      },
-     method: 'GET',
-     })
-   return await response.json();
-  }
+async function getUserCards(){
+  let response = await fetch('http://localhost:8080/getData.php',
+  {
+    headers : {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    method: 'GET',
+  })
+  return await response.json();
+}
 
 
-
-
-function createCardElement(userCard)
-{
-  // let place = document.querySelector('#cardholder');
-  // const card = document.createElement('div');
-  // place.after = document.createElement('div');
-
-
-
+function createCardElement(userCard){
+  const cardholder = document.getElementById('cardholder');
   const card = document.createElement('div');
-
-
-
-
-   card.className = 'card_get_data';
-   card.innerHTML = `
+  card.className = 'card_get_data';
+  card.innerHTML = `
    <div class="card">
    <div class="card_data">
      <img class="card__icon" src="img/card.svg" alt="Аватар" />
@@ -52,22 +29,25 @@ function createCardElement(userCard)
      <p>Деятельность: ${userCard.activity}</p>
      <p>Согласие на рассылку:  ${userCard.agreement ? "Да" : "Нет"}  </p>
    </div>
- </div>
-</div>
+   </div>
    `
-   return card;
+  cardholder.innerHTML += `<div class="card card_get_data"></div>`;
+  return card;
 };
 
 
-async function main()
- {
-   const userCards = await getUserCards();
-   for (const userCard of userCards){
-     const cardElement = createCardElement(userCard);
-       document.body.appendChild(cardElement);
 
-   }
- }
+
+async function main() {
+  const userCards = await getUserCards();
+  for (const userCard of userCards){
+    const cardElement = createCardElement(userCard);
+    document.body.appendChild(cardElement);
+  }
+}
+
+
+
 
 
 

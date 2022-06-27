@@ -4,11 +4,6 @@
   margin: 0;
 }
 
-.block
-{
-
-}
-
 .button-form
 {
   box-sizing: border-box;
@@ -57,16 +52,15 @@
 
 .card_data
 {
-padding: 47px 31px ;
-font: 500 18px/1.6 'Montserrat', sans-serif;
-color: #fff;
+  padding: 47px 31px ;
+  font: 500 18px/1.6 'Montserrat', sans-serif;
+  color: #fff;
 }
 
 
 .cardholder
 {
   margin: 26px 111px;
-
   background-color: aquamarine;
   max-width: 100%;
   height: 500px;
